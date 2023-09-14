@@ -14,6 +14,9 @@
 		DEC6323A2AB0350A00A4C429 /* LikeCoodinatorLayoutExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC632392AB0350A00A4C429 /* LikeCoodinatorLayoutExampleTests.swift */; };
 		DEC632442AB0350A00A4C429 /* LikeCoodinatorLayoutExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC632432AB0350A00A4C429 /* LikeCoodinatorLayoutExampleUITests.swift */; };
 		DEC632462AB0350A00A4C429 /* LikeCoodinatorLayoutExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC632452AB0350A00A4C429 /* LikeCoodinatorLayoutExampleUITestsLaunchTests.swift */; };
+		DEFC83812AB305C100504275 /* ContentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFC83802AB305C100504275 /* ContentHeaderView.swift */; };
+		DEFC83832AB305D700504275 /* ContentSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFC83822AB305D700504275 /* ContentSheetView.swift */; };
+		DEFC83852AB30AEB00504275 /* ContentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFC83842AB30AEB00504275 /* ContentRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		DEC6323F2AB0350A00A4C429 /* LikeCoodinatorLayoutExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LikeCoodinatorLayoutExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC632432AB0350A00A4C429 /* LikeCoodinatorLayoutExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCoodinatorLayoutExampleUITests.swift; sourceTree = "<group>"; };
 		DEC632452AB0350A00A4C429 /* LikeCoodinatorLayoutExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCoodinatorLayoutExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DEFC83802AB305C100504275 /* ContentHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentHeaderView.swift; sourceTree = "<group>"; };
+		DEFC83822AB305D700504275 /* ContentSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSheetView.swift; sourceTree = "<group>"; };
+		DEFC83842AB30AEB00504275 /* ContentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +136,28 @@
 		DEC632522AB036A000A4C429 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DEC6322A2AB0350900A4C429 /* ContentView.swift */,
+				DEFC837F2AB305AD00504275 /* Components */,
+				DEFC837E2AB305A300504275 /* Content */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DEFC837E2AB305A300504275 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				DEC6322A2AB0350900A4C429 /* ContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		DEFC837F2AB305AD00504275 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DEFC83802AB305C100504275 /* ContentHeaderView.swift */,
+				DEFC83822AB305D700504275 /* ContentSheetView.swift */,
+				DEFC83842AB30AEB00504275 /* ContentRowView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFC83852AB30AEB00504275 /* ContentRowView.swift in Sources */,
+				DEFC83832AB305D700504275 /* ContentSheetView.swift in Sources */,
+				DEFC83812AB305C100504275 /* ContentHeaderView.swift in Sources */,
 				DEC6322B2AB0350900A4C429 /* ContentView.swift in Sources */,
 				DEC632292AB0350900A4C429 /* LikeCoodinatorLayoutExampleApp.swift in Sources */,
 			);
