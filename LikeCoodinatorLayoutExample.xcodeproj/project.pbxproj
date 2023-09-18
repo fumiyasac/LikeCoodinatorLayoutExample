@@ -20,6 +20,7 @@
 		DEFC83882AB4B05500504275 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFC83872AB4B05500504275 /* ContentViewModel.swift */; };
 		DEFC838F2AB59AFA00504275 /* FirstAppearExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFC838E2AB59AFA00504275 /* FirstAppearExtension.swift */; };
 		DEFC83912AB5A5F000504275 /* BreadEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFC83902AB5A5F000504275 /* BreadEntity.swift */; };
+		DEFC83932AB6976700504275 /* ScrollViewWithVerticalOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFC83922AB6976700504275 /* ScrollViewWithVerticalOffset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DEFC83872AB4B05500504275 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		DEFC838E2AB59AFA00504275 /* FirstAppearExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppearExtension.swift; sourceTree = "<group>"; };
 		DEFC83902AB5A5F000504275 /* BreadEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadEntity.swift; sourceTree = "<group>"; };
+		DEFC83922AB6976700504275 /* ScrollViewWithVerticalOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewWithVerticalOffset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				DEFC838E2AB59AFA00504275 /* FirstAppearExtension.swift */,
+				DEFC83922AB6976700504275 /* ScrollViewWithVerticalOffset.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEFC83852AB30AEB00504275 /* ContentRowView.swift in Sources */,
+				DEFC83932AB6976700504275 /* ScrollViewWithVerticalOffset.swift in Sources */,
 				DEFC83832AB305D700504275 /* ContentSheetView.swift in Sources */,
 				DEFC838F2AB59AFA00504275 /* FirstAppearExtension.swift in Sources */,
 				DEFC83882AB4B05500504275 /* ContentViewModel.swift in Sources */,
