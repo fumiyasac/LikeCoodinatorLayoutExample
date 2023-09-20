@@ -8,15 +8,14 @@
 import Foundation
 
 enum BreadList {
-    case day1
-    case day2
-    case day3
+    case first
+    case second
+    case third
 }
 
 @MainActor
 final class ContentViewModel: ObservableObject {
 
     //
-    @Published private(set) var selectedBreadList: BreadList = .day1
-    
+    @Published private(set) var selectedBreadList: BreadList = .first
 }

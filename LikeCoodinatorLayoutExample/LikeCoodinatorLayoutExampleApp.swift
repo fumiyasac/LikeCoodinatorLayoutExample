@@ -9,6 +9,14 @@ import SwiftUI
 
 @main
 struct LikeCoodinatorLayoutExampleApp: App {
+
+    // MARK: - property
+
+    // MEMO: AppDelegate
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+    // MARK: - Body
+
     var body: some Scene {
         WindowGroup {
             ContentView()
