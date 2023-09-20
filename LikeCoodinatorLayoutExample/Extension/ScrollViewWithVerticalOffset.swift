@@ -7,15 +7,21 @@
 
 import SwiftUI
 
-// Quote & Modify:
+// MEMO: ScrollViewそのままではY軸方向のOffsetを取得する事ができない
+// 👉 PreferenceKeyを利用して変化を監視する ＆ GeometryReaderの中にColor.clearを入れて"frameLayer"を値を取る様な形とする
+// 参考: 下記のコードを参考にしています
 // https://gist.github.com/Kievkao/0682dc8814a953640ca9b74413424bb8
 
-public struct ScrollViewWithVerticalOffset<Content: View>: View {
+struct ScrollViewWithVerticalOffset<Content: View>: View {
+
+    // MARK: - Property
 
     let onOffsetChange: (CGFloat) -> Void
     let content: () -> Content
 
-    public init(
+    // MARK: - Initializer
+
+    init(
         onOffsetChange: @escaping (CGFloat) -> Void,
         @ViewBuilder content: @escaping () -> Content
     ) {
@@ -23,7 +29,9 @@ public struct ScrollViewWithVerticalOffset<Content: View>: View {
         self.content = content
     }
 
-    public var body: some View {
+    // MARK: - Body
+
+    var body: some View {
         ScrollView(.vertical) {
             offsetReader
             content()
@@ -32,6 +40,8 @@ public struct ScrollViewWithVerticalOffset<Content: View>: View {
         .coordinateSpace(name: "frameLayer")
         .onPreferenceChange(OffsetPreferenceKey.self, perform: onOffsetChange)
     }
+
+    // MARK: - Private Function
 
     private var offsetReader: some View {
         GeometryReader { proxy in
@@ -45,7 +55,12 @@ public struct ScrollViewWithVerticalOffset<Content: View>: View {
     }
 }
 
+// MARK: - Private Struct
+
 private struct OffsetPreferenceKey: PreferenceKey {
+
+    // MARK: - Property
+
     static var defaultValue: CGFloat = .zero
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {}
 }
