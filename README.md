@@ -1,4 +1,4 @@
-# [ING] - UICollectionViewを活用した表現とバックエンド側との連携実装に関するサンプル
+# [ING] - AndroidのCoodinatorLayoutの様な動きをSwiftUIで作成するサンプル
 
 ### 1. 解説資料
 
