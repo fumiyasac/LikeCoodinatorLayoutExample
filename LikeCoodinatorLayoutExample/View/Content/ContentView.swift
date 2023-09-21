@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    // MARK: - property
+    // MARK: - Property
 
     //
     private let verticalOffsetThreshold = -192.0
@@ -31,16 +31,12 @@ struct ContentView: View {
                     //
                     Image("background")
                         .resizable()
-                        //.scaledToFill()
                         .clipped()
                         .frame(height: 360.0)
+                    //
                     Rectangle()
-                        .fill(
-                            Color(uiColor: UIColor(code: "#bfa46f"))
-                                .opacity(0.48)
-                        )
+                        .fill(Color(uiColor: UIColor(code: "#bfa46f")).opacity(0.48))
                         .frame(height: 360.0)
-                    
                 }
                 //
                 ScrollViewWithVerticalOffset(
@@ -60,18 +56,21 @@ struct ContentView: View {
                             Section(
                                 content: {
                                     //
-                                    VStack(spacing: 0) {
-                                        ForEach(0..<48) { _ in
-                                            ContentRowView()
-                                         }
+                                    VStack(spacing: 0.0) {
+                                        //
+                                        ForEach(viewModel.selectedBreadEntities, id: \.id) { selectedBreadEntity in
+                                            ContentRowView(breadEntity: selectedBreadEntity)
+                                        }
                                     }
-                                    .padding(.vertical, 24)
+                                    .padding(.bottom, 24.0)
                                 },
                                 header: {
+                                    //
                                     ContentHeaderView(
                                         selectedBreadList: viewModel.selectedBreadList,
                                         shouldCollapse: shouldCollapse,
-                                        onTapButton: { [weak viewModel] breadList in
+                                        onTapHeaderButton: { [weak viewModel] breadList in
+                                            //
                                             viewModel?.selectBreadList(breadList: breadList)
                                         }
                                     )
@@ -88,11 +87,3 @@ struct ContentView: View {
         }
     }
 }
-
-/*
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-*/

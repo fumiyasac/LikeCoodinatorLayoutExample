@@ -9,47 +9,58 @@ import SwiftUI
 
 struct ContentHeaderView: View {
 
+    // MARK: - Property
+
     let selectedBreadList: BreadList
     let shouldCollapse: Bool
-    let onTapButton: (BreadList) -> Void
+    let onTapHeaderButton: (BreadList) -> Void
 
-    // Define margin values to calculate horizontal position for capsule rectangle
+    //
     private let buttonAreaLeadingMargin = 16.0
     private let buttonTrailingMargin = 16.0
     private let betweenButtonMargin = 8.0
 
-    // Define all button count to calculate horizontal position for capsule rectangle
+    //
     private var buttonsCount: Int {
         BreadList.allCases.count
     }
+
+    // MARK: - Body
 
     var body: some View {
         ZStack {
             Color.white
             HStack(spacing: 8.0) {
+                //
                 ForEach(BreadList.allCases, id: \.rawValue) { breadList in
                     Button {
-                        onTapButton(breadList)
+                        //
+                        onTapHeaderButton(breadList)
                     } label: {
-                        VStack(spacing: 0) {
+                        //
+                        VStack(spacing: 0.0) {
                             Text(breadList.subtitle)
                                 .font(.system(size: 12.0, weight: .bold, design: .rounded))
+                            //
                             if !shouldCollapse {
                                 Text(breadList.title)
                                     .font(.system(size: 20.0, weight: .bold, design: .rounded))
                                     .frame(height: 32.0)
                             }
                         }
+                        //
                         .frame(maxWidth: .infinity)
                         .padding(shouldCollapse ? 6.0 : 4.0)
                         .foregroundStyle(selectedBreadList == breadList ? .white : .primary)
                     }
                 }
             }
+            // MEMO: .backgroundと.paddingの順番がこの形でないと崩れてしまうので注意
             .padding(.horizontal, 16.0)
             .padding(.vertical, 12.0)
             .background(alignment: .center) {
                 GeometryReader { geometry in
+                    //
                     Capsule()
                         .fill(Color(uiColor: UIColor(code: "#bfa46f")))
                         .frame(
@@ -61,22 +72,23 @@ struct ContentHeaderView: View {
                 }
             }
         }
+        //
         .frame(height: shouldCollapse ? 53.0 : 82.0)
         .animation(.easeInOut(duration: 0.08), value: shouldCollapse)
     }
 
     private func calculateDynamicTabHorizontalOffset(deviceWidth: CGFloat) -> CGFloat {
         let buttonAreaWidth = calculateButtonWidth(deviceWidth: deviceWidth)
-        // Get the index value corresponding to `selectedDay` and use it for calculation
-        let indexBySelectedDay = getIndexBySelectedDay()
-        return buttonAreaLeadingMargin + (betweenButtonMargin + buttonAreaWidth) * CGFloat(indexBySelectedDay)
+        //
+        let indexBySelectedBreadList = getIndexBySelectedBreadList()
+        return buttonAreaLeadingMargin + (betweenButtonMargin + buttonAreaWidth) * CGFloat(indexBySelectedBreadList)
     }
 
     private func calculateButtonHeight() -> CGFloat {
-        return shouldCollapse ? CGFloat(32) : CGFloat(56)
+        return shouldCollapse ? CGFloat(32.0) : CGFloat(56.0)
     }
 
-    private func getIndexBySelectedDay() -> Int {
+    private func getIndexBySelectedBreadList() -> Int {
         switch selectedBreadList {
         case .first:
             0
@@ -88,7 +100,7 @@ struct ContentHeaderView: View {
     }
 
     private func calculateButtonWidth(deviceWidth: CGFloat) -> CGFloat {
-        // Calculate button width considering related margins
+        //
         let excludeTotalMargin = calculateExcludeTotalMargin()
         return (deviceWidth - excludeTotalMargin) / CGFloat(buttonsCount)
     }
@@ -98,9 +110,3 @@ struct ContentHeaderView: View {
         return buttonAreaLeadingMargin + buttonTrailingMargin + totalBetweenButtonMargin
     }
 }
-
-//struct ContentHeaderView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentHeaderView()
-//    }
-//}

@@ -7,6 +7,7 @@
 
 import Foundation
 
+//
 enum BreadList: String, CaseIterable {
     case first
     case second
@@ -47,11 +48,13 @@ final class ContentViewModel: ObservableObject {
     // MARK: - Initializer
 
     init() {
+        //
         makeSelectedBreadEntities(breadList: .first)
     }
 
     // MARK: - Function
 
+    //
     func selectBreadList(breadList: BreadList) {
         selectedBreadList = breadList
         makeSelectedBreadEntities(breadList: breadList)
@@ -64,8 +67,8 @@ final class ContentViewModel: ObservableObject {
         //
         selectedBreadEntities = (1...16).map { index in
             BreadEntity(
-                name: "美味しいパン[\(breadList.title)のサンプルNo.\(index)]",
-                summary: "こちらは「美味しいパン[\(breadList.title)のサンプルNo.\(index)]」の説明文言サンプルになります。\n美味しいパンとコーヒーの組み合わせは、朝の目覚めと「よし！今日も1日頑張っていこう！」という気持ちを奮い立たせる最高の組み合わせであると考えています。",
+                name: "美味しいパン（\(breadList.title)のサンプルNo.\(index)）",
+                summary: "こちらは`美味しいパン（\(breadList.title)のサンプルNo.\(index)）`の説明文言サンプルになります。美味しいパンとコーヒーの組み合わせは、朝の目覚めと「よし！今日も1日頑張っていこう！」という気持ちを奮い立たせる最高の組み合わせであると考えています。",
                 imageName: "sample_\(breadList.rawValue)_\(String(format: "%02d", index))"
             )
         }
