@@ -9,11 +9,13 @@ import SwiftUI
 
 struct ContentHeaderView: View {
 
-    // MARK: - Property
+    // MARK: - Property (Initializer)
 
     let selectedBreadList: BreadList
     let shouldCollapse: Bool
     let onTapHeaderButton: (BreadList) -> Void
+
+    // MARK: - Property (Private)
 
     //
     private let buttonAreaLeadingMargin = 16.0

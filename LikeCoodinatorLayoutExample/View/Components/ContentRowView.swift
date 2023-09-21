@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentRowView: View {
 
-    // MARK: - Property
+    // MARK: - Property (Initializer)
 
     let breadEntity: BreadEntity
 
