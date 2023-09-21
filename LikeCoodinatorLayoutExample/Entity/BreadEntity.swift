@@ -14,25 +14,19 @@ struct BreadEntity: Hashable {
     let id: String
     let name: String
     let summary: String
-    let category: String
     let imageName: String
-    let selectedDay: String
 
     // MARK: - Initializer
 
     init(
         name: String,
         summary: String,
-        category: String,
-        imageName: String,
-        selectedDay: String
+        imageName: String
     ) {
         self.id = UUID().uuidString
         self.name = name
         self.summary = summary
-        self.category = category
         self.imageName = imageName
-        self.selectedDay = selectedDay
     }
 
     // MARK: - Hashable
@@ -45,8 +39,6 @@ struct BreadEntity: Hashable {
         return lhs.id == rhs.id
             && lhs.name == rhs.name
             && lhs.summary == rhs.summary
-            && lhs.category == rhs.category
             && lhs.imageName == rhs.imageName
-            && lhs.selectedDay == rhs.selectedDay
     }
 }

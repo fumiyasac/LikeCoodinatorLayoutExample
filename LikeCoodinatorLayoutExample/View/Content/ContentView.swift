@@ -17,6 +17,9 @@ struct ContentView: View {
     //
     @State private var shouldCollapse = false
 
+    //
+    @StateObject private var viewModel: ContentViewModel = .init()
+
     // MARK: - Body
 
     var body: some View {
@@ -28,8 +31,16 @@ struct ContentView: View {
                     //
                     Image("background")
                         .resizable()
-                        .scaledToFill()
+                        //.scaledToFill()
+                        .clipped()
                         .frame(height: 360.0)
+                    Rectangle()
+                        .fill(
+                            Color(uiColor: UIColor(code: "#bfa46f"))
+                                .opacity(0.48)
+                        )
+                        .frame(height: 360.0)
+                    
                 }
                 //
                 ScrollViewWithVerticalOffset(
@@ -57,11 +68,13 @@ struct ContentView: View {
                                     .padding(.vertical, 24)
                                 },
                                 header: {
-                                    ContentHeaderView()
-                                        .frame(height: shouldCollapse ? 53.0 : 82.0)
-                                        .animation(.easeInOut(duration: 0.08), value: shouldCollapse)
-                                        .background(.blue)
-
+                                    ContentHeaderView(
+                                        selectedBreadList: viewModel.selectedBreadList,
+                                        shouldCollapse: shouldCollapse,
+                                        onTapButton: { [weak viewModel] breadList in
+                                            viewModel?.selectBreadList(breadList: breadList)
+                                        }
+                                    )
                                 }
                             )
                         }
