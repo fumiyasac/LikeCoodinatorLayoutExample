@@ -89,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE2416212ABCA9F8009A93B5 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DEFC83922AB6976700504275 /* ScrollViewWithVerticalOffset.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		DEC6321C2AB0350900A4C429 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +123,7 @@
 				DEC632282AB0350900A4C429 /* LikeCoodinatorLayoutExampleApp.swift */,
 				DEFC838A2AB4B38D00504275 /* Extension */,
 				DEFC838D2AB59ACA00504275 /* Entity */,
+				DE2416212ABCA9F8009A93B5 /* Library */,
 				DEC632522AB036A000A4C429 /* View */,
 				DEFC83862AB4B03D00504275 /* ViewModel */,
 				DEC6322C2AB0350A00A4C429 /* Assets.xcassets */,
@@ -188,7 +197,6 @@
 			children = (
 				DE24161F2ABAE851009A93B5 /* ColorExtension.swift */,
 				DEFC838E2AB59AFA00504275 /* FirstAppearExtension.swift */,
-				DEFC83922AB6976700504275 /* ScrollViewWithVerticalOffset.swift */,
 				DE24161D2ABAE7C1009A93B5 /* UIColorExtension.swift */,
 			);
 			path = Extension;
@@ -266,7 +274,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					DEC632242AB0350900A4C429 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -415,6 +423,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -475,6 +484,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -508,6 +518,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,6 +547,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

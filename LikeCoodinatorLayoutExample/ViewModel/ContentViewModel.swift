@@ -7,7 +7,7 @@
 
 import Foundation
 
-//
+// Header要素に配置するボタン表示に関するEnum定義
 enum BreadList: String, CaseIterable {
     case first
     case second
@@ -39,22 +39,22 @@ enum BreadList: String, CaseIterable {
 @MainActor
 final class ContentViewModel: ObservableObject {
 
-    // MARK: - Property
+    // MARK: - Property (@Published)
 
-    //
+    // View要素表示で利用する値を保持するための変数
     @Published private(set) var selectedBreadList: BreadList = .first
     @Published private(set) var selectedBreadEntities: [BreadEntity] = []
 
     // MARK: - Initializer
 
     init() {
-        //
+        // 初期化時は`BreadList.first`に対応する要素を表示する
         makeSelectedBreadEntities(breadList: .first)
     }
 
     // MARK: - Function
 
-    //
+    // ボタンクリック処理で選択されたBreadList(enum定義)が変更された際に実行する
     func selectBreadList(breadList: BreadList) {
         selectedBreadList = breadList
         makeSelectedBreadEntities(breadList: breadList)
@@ -64,7 +64,7 @@ final class ContentViewModel: ObservableObject {
 
     private func makeSelectedBreadEntities(breadList: BreadList) {
 
-        //
+        // 選択されたBreadList(enum定義)に該当する要素一覧を作成する
         selectedBreadEntities = (1...16).map { index in
             BreadEntity(
                 name: "美味しいパン（\(breadList.title)のサンプルNo.\(index)）",

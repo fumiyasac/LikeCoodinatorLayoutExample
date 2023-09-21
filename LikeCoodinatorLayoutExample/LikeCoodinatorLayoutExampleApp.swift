@@ -10,9 +10,9 @@ import SwiftUI
 @main
 struct LikeCoodinatorLayoutExampleApp: App {
 
-    // MARK: - property
+    // MARK: - Property (@UIApplicationDelegateAdaptor)
 
-    // MEMO: AppDelegate
+    // MEMO: AppDelegate部分を切り出しています（※NavigationBarの配色変更で利用しています）
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     // MARK: - Body
