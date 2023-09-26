@@ -20,7 +20,17 @@ __【🎥 Movie】__
 
 https://github.com/fumiyasac/LikeCoodinatorLayoutExample/assets/949561/bcad0aa6-9254-4d59-b4ad-cc23a3d51b31
 
-__【📝 Note】__
+### 3. 設計資料
+
+Contributionを実施した際の設計メモや、iOS⇔Android間のView実装を見比べた際の着眼点を下記にまとめています。
+
+__【📝 Note of DroidKaigi2023 Contribution】__
+
+![F4CG3bHbcAATO8H](https://github.com/fumiyasac/LikeCoodinatorLayoutExample/assets/949561/36607e70-d8a4-4bcd-bf34-fda05c97843e)
+
+![F4jRebjacAApFp5](https://github.com/fumiyasac/LikeCoodinatorLayoutExample/assets/949561/5949ae29-b73d-4d22-a399-624aa1524f2d)
+
+__【📑 Policy of UI Implementation】__
 
 ![1-droidkaigi2023-official-view-image](https://github.com/fumiyasac/LikeCoodinatorLayoutExample/assets/949561/aac562d5-517c-42c3-9427-ff1152cb1367)
 
