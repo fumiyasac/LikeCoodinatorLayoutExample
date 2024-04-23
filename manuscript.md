@@ -26,7 +26,7 @@ DroidKaigi2023の公式アプリでは、Androidアプリ側の実装が先行�
 
 DroidKaigi2023の公式アプリ内の該当画面におけるView構造を概要をまとめると、下図の様になります。
 
-![DroidKaigi2023公式アプリAndroid側のView要素の関係を探る](https://user-images.githubusercontent.com/949561/270631076-aac562d5-517c-42c3-9427-ff1152cb1367.png)
+![DroidKaigi2023公式アプリAndroid側のView要素の関係を探る](./images/01-android-scroll-state-header.png)
 
 ### 1-2. 動きを実現している部分の理解を深める
 
@@ -78,7 +78,7 @@ SwiftUIでのUI実装を進めていく場合において、UIKitで使ってい
 
 本章では、DroidKaigi2023の公式アプリでの実装を参考にして、該当部分の動きを再現したUI実装サンプルをコードを交えて紹介します。紹介する実装サンプルでは、API通信処理などの処理はありませんが、後述するView要素関連処理部分のコード内には解説コメントを記載しておりますので、理解の参考になれば幸いです。
 
-![SwiftUIを利用して類似した処理を実現する場合の実装方針概要](https://user-images.githubusercontent.com/949561/270631106-4e675b09-b5a0-4f49-9541-2cf0645f39c5.png)
+![SwiftUIを利用して類似した処理を実現する場合の実装方針概要](./images/02-ios-scroll-offset-idea.png)
 
 ### 3-1. ScrollViewでOffset値を取得可能にする工夫
 

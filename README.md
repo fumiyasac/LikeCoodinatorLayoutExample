@@ -14,7 +14,7 @@ __【🖼️ Screenshots】__
 
 Expand | Collapse
 :--: | :--:
-<img src="https://github.com/fumiyasac/LikeCoodinatorLayoutExample/assets/949561/1a669d4c-5a4d-414e-90e7-3b6795c7e623" width="300" /> | <img src="https://github.com/fumiyasac/LikeCoodinatorLayoutExample/assets/949561/9ba8ee9b-ce15-4210-b738-89be235c63c9" width="300" />
+<img src="./images/00-sample-capture-expand.jpg" width="300" /> | <img src="./images/00-sample-capture-collapse.png" width="300" />
 
 __【🎥 Movie】__
 
@@ -26,12 +26,12 @@ Contributionを実施した際の設計メモや、iOS⇔Android間のView実装
 
 __【📝 Note of DroidKaigi2023 Contribution】__
 
-![F4CG3bHbcAATO8H](https://github.com/fumiyasac/LikeCoodinatorLayoutExample/assets/949561/36607e70-d8a4-4bcd-bf34-fda05c97843e)
+![実装方針図解ノートその1](./images/00-strategy-note-volume1.jpg)
 
-![F4jRebjacAApFp5](https://github.com/fumiyasac/LikeCoodinatorLayoutExample/assets/949561/5949ae29-b73d-4d22-a399-624aa1524f2d)
+![実装方針図解ノートその2](./images/00-strategy-note-volume2.jpg)
 
 __【📑 Policy of UI Implementation】__
 
-![1-droidkaigi2023-official-view-image](https://github.com/fumiyasac/LikeCoodinatorLayoutExample/assets/949561/aac562d5-517c-42c3-9427-ff1152cb1367)
+![DroidKaigi2023公式アプリAndroid側のView要素の関係を探る](./images/01-android-scroll-state-header.png)
 
-![2-ios-swiftui-example-image](https://github.com/fumiyasac/LikeCoodinatorLayoutExample/assets/949561/4e675b09-b5a0-4f49-9541-2cf0645f39c5)
+![SwiftUIを利用して類似した処理を実現する場合の実装方針概要](./images/02-ios-scroll-offset-idea.png)
