@@ -14,7 +14,7 @@ __【🖼️ Screenshots】__
 
 Expand | Collapse
 :--: | :--:
-<img src="./images/00-sample-capture-expand.jpg" width="300" /> | <img src="./images/00-sample-capture-collapse.png" width="300" />
+<img src="./images/00-sample-capture-expand.jpg" width="300" /> | <img src="./images/00-sample-capture-collapse.jpg" width="300" />
 
 __【🎥 Movie】__
 
