@@ -9,9 +9,14 @@ import Foundation
 
 // Header要素に配置するボタン表示に関するEnum定義
 enum BreadList: String, CaseIterable {
+
+    // MARK: - Case
+
     case first
     case second
     case third
+
+    // MARK: - Computed Property
 
     var title: String {
         switch self {
